@@ -8,11 +8,9 @@ from selenium.webdriver.common.keys import Keys
 
 def main():
     driver = webdriver.Chrome()
-    driver.get("https://www.google.com.ua")
-    elem = driver.find_elements_by_name('q')
+    driver.get("https://combotask.com.ua/performers?ordering=-rating_mark")
+    elem = driver.find_elements_by_class_name(' form-input-grey ')
     elem.click()
-    elem.send_keys('123')
-    elem.send_keys(Keys.ENTER)
 
 if __name__ == "__main__":
     main()
